@@ -1,19 +1,6 @@
-
 # Neighborhood Library Application
 
 This is an application for a neighborhood library that allows anyone to check out a book based on the honor system. The application keeps track of who checked out a book and when it was checked in.
-
-## Requirements
-
-The application is built using Java and meets the following requirements:
-
-* Use an array to hold an inventory of at least 5 books of your choice.
-* When a book is checked out:
-    * the book's `checkedOutTo` variable should be set to the name provided
-    * the `isCheckedOut` variable should be set to true
-* When a book is checked in:
-    * the book's `checkedOutTo` variable should be set to an empty string
-    * the `isCheckedOut` variable should be set to false
 
 ## Screens
 
