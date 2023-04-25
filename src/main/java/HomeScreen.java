@@ -19,14 +19,15 @@ public class HomeScreen {
             System.out.println("2. Show Checked Out Books");
             System.out.println("3. Exit");
 
+            // read user input from the scanner
             int choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
-                    showAvailableBooks(scanner, inventory);
+                    showAvailableBooks(scanner, inventory);  // call the method to show available books
                     break;
                 case 2:
-                    showCheckedOutBooks(scanner, inventory);
+                    showCheckedOutBooks(scanner, inventory); // call the method to show checked out books
                     break;
                 case 3:
                     System.out.println("Thank you for using the Neighborhood Library!");
@@ -37,6 +38,8 @@ public class HomeScreen {
         }
     }
 
+
+    // method to show available books
     public static void showAvailableBooks(Scanner scanner, Book[] inventory) {
         System.out.println("Available Books:");
         for (Book book : inventory) {
@@ -46,14 +49,14 @@ public class HomeScreen {
         }
 
         System.out.println("Enter the ID of the book you want to check out, or enter 0 to go back to the home screen");
-        int bookId = scanner.nextInt();
+        int bookId = scanner.nextInt();  // read user input from the scanner
 
         if (bookId == 0) {
             return;
         }
 
         for (Book book : inventory) {
-            if (book.getId() == bookId) {
+            if (book.getId() == bookId) {   // find the book with the matching ID
                 System.out.println("Enter your name:");
                 scanner.nextLine(); // consume the remaining newline character from nextInt()
                 String name = scanner.nextLine();
@@ -66,7 +69,7 @@ public class HomeScreen {
         System.out.println("Invalid book ID. Please try again.");
     }
 
-     //SHOWS CHECKED OUT BOOKS
+    // method to show checked out books
     public static void showCheckedOutBooks(Scanner scanner, Book[] inventory) {
         System.out.println("Checked Out Books:");
         for (Book book : inventory) {
@@ -75,10 +78,11 @@ public class HomeScreen {
             }
         }
 
+        // ask the user if they want to check in a book or go back to the home screen
         System.out.println("Enter 'C' to check in a book, or 'X' to go back to the home screen");
         String choice = scanner.next();
 
-        //
+
         if (choice.equalsIgnoreCase("X")) {
             return;
         } else if (choice.equalsIgnoreCase("C")) {

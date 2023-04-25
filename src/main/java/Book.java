@@ -1,3 +1,4 @@
+// Represents a book with an id, isbn, title, and checkout status
 public class Book {
     private int id;
     private String isbn;
@@ -5,6 +6,7 @@ public class Book {
     private boolean isCheckedOut;
     private String checkedOutTo;
 
+    // Constructor
     public Book(int id, String isbn, String title) {
         this.id = id;
         this.isbn = isbn;
@@ -13,6 +15,7 @@ public class Book {
         checkedOutTo = null;
     }
 
+    // getters and setters
     public int getId() {
         return id;
     }
